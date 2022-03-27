@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
+import data from'./MOCK_DATA.json'
+import { useState } from 'react';
+import Searchbox from './Searchbox';
+import Gallery from './Gallery';
+import Head from './Head';
 function App() {
+  const[val,setval]=useState('')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head/>
+      <Searchbox val={val} setval={setval} />
+      <Gallery query={val}/>
     </div>
   );
 }

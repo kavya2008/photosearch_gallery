@@ -1,38 +1,93 @@
 .App {
   text-align: center;
+  
+}
+.App input{
+  padding-left: 10px;
+  margin-top: 15px;
+}
+.inp{
+  outline: none;
+  border: 2px solid rgb(70, 69, 69);
+  padding: 3px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.gridcntain{
+  margin: 0 auto;
+}
+li{
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+}
+img{
+  cursor: pointer;
+}
+.preview{
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-word-1 {
+  --color-1: #062c4b;
+  --color-2: #8dcef3;
+  --color-3: #044238;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title-word-2 {
+  --color-1: #044238;
+  --color-2: #6852cc;
+  --color-3: #430e74;
+}
+
+.title-word-3 {
+  --color-1: #062c4b;
+  --color-3: #8dcef3;
+  --color-2: #044238;
+}
+
+.title-word-4 {
+  --color-3: #430e74;
+  --color-2: #6852cc;
+  --color-1: #8dcef3;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+
+
+.title {
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+ 
+}
+@media only screen and (min-width: 290px) and (max-width: 539px) {
+ .title {
+    font-size: 15px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@media only screen and (max-width: 290px) {
+  .title {
+    padding-top: 10px;
+     font-size: 15px;
+   }
+ }
+ 
